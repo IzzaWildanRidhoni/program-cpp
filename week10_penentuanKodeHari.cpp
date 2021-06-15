@@ -11,16 +11,18 @@ string cariHari(int q, int m, int tahun){
     if (m == 1)
     {
         m=13;
+       tahun-=1;
     }else if (m==2)
     {
         m=14;
+       tahun-=1;
     }
-    
     
     k = tahun % 100;
     j = tahun /100;
+    
 
-    h = (q+((13*(m+1))/5)+k+(k/4)+(j/4)-(2*j)) % 7;
+    h = (q+(13*(m+1)/5)+k+(k/4)+(j/4)-(2*j)) % 7;
 
     switch (h)
     {

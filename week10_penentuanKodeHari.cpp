@@ -8,6 +8,15 @@ int h,q,k,j,m,tahun;
     string hari;
 
 string cariHari(int q, int m, int tahun){
+    if (m == 1)
+    {
+        m=13;
+    }else if (m==2)
+    {
+        m=14;
+    }
+    
+    
     k = tahun % 100;
     j = tahun /100;
 
@@ -46,12 +55,9 @@ string cariHari(int q, int m, int tahun){
 int main(){
 
     // rumus
-    cout<<"masukkan tanggal <1..31> : ";cin>>q;
-    cout<<endl;
-    cout<<"kode  bulan : ( 3 =  maret, 4 = april , 5 = mei ==> 12 = desember ,13 = januari , 14 = februari ) "<<endl;
-    cout<<"\nmasukkan kode bulan  <3..14> : ";cin>>m;
-
-    cout<<"masukkan tahun dalam suatu abad : ";cin>>tahun;
+    cout<<"masukkan tanggal  : ";cin>>q;
+    cout<<"masukkan  bulan: ";cin>>m;
+    cout<<"masukkan tahun  : ";cin>>tahun;
     cout<<endl;
     cout<<q<<"/"<<m<<"/"<<tahun<<"  adalah hari  "<<cariHari(q,m,tahun);
     cout<<endl;
